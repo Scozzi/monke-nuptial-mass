@@ -31,9 +31,8 @@ export default function MintQR() {
   useEffect(() => {
     // The API URL, which will be used to create the Solana Pay URL
     // Append the reference address to the URL as a query parameter
-    const { location } = window;
-    const apiUrl = `${location.protocol}//${
-      location.host
+    const apiUrl = `${
+      process.env.NEXT_PUBLIC_BASE_URL
     }/api/mintNft?reference=${reference.toBase58()}`;
 
     // Create Solana Pay URL

@@ -8,7 +8,7 @@ export default function useToastHook() {
       title: "NFT Minted!",
       description: (
         <Link
-          href={`https://explorer.solana.com/tx/${transactionSignature}?cluster=devnet`}
+          href={`https://explorer.solana.com/tx/${transactionSignature}?cluster=mainnet-beta`}
           isExternal
         >
           View on Solana Explorer

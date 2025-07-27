@@ -102,8 +102,12 @@ async function post(
 
 // Helper function to build the transaction
 async function buildTransaction(account: PublicKey, reference: PublicKey) {
-  // Connect to devnet cluster
-  const connection = new Connection(clusterApiUrl("devnet"), "confirmed");
+  // Connect to mainnet-beta cluster
+  const connection = new Connection(
+    `https://mainnet.helius-rpc.com/?api-key=${process.env
+      .NEXT_PUBLIC_HELIUS_API_KEY!}`,
+    "confirmed"
+  );
 
   // Generate keypair to use as address of token account
   const mintKeypair = Keypair.generate();

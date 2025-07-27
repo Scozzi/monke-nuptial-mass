@@ -1,38 +1,42 @@
 # Solana Pay NFT Minter
 
-This repo is intended to provide a minimal example of how to use [Solana Pay](https://docs.solanapay.com/) transaction requests to mint NFTs on Solana.
+This is a [Solana Pay](https://solana.com/solana-pay) sample application that demonstrates how to mint an NFT on Solana.
 
-- **Solana Pay Transaction Request**: The Solana Pay transaction request implementation can be found in [`./pages/api/mintNft.ts`](./pages/api/mintNft.ts).
-- **Solana Pay QR Code**: The implementation for generating a Solana Pay QR code is located in [`./components/MintQR.tsx`](./components/MintQR.tsx).
-- **Solana Wallet-Adapter Example**: For comparison, an example of minting NFTs using the Solana wallet-adapter is available in [`./components/MintButton.tsx`](./components/MintButton.tsx).
+Here is the [Mainnet Demo](https://solana-pay-nft-minter.vercel.app/). To mint, ensure that your wallet is funded with SOL.
 
-Here is the [Devnet Demo](https://solana-pay-nft-minter.vercel.app/). To mint, ensure that your Devnet wallet is funded with Devnet SOL. You can airdrop Devnet SOL using this [faucet](https://solana-devnet-faucet-seven.vercel.app/).
+## How It Works
 
-![SolanaPayNFTMinter](https://github.com/ZYJLiu/solana-pay-nft-minter/assets/75003086/6a85c9ad-922a-496a-8d49-a74e80b09959)
+This application has two main parts:
+
+1.  A frontend built with [Next.js](https://nextjs.org/) and [React](https://reactjs.org/) that displays a QR code for the user to scan.
+2.  A backend that handles the minting process.
+
+The minting process is handled by the API route `pages/api/mintNft.ts`. This API route is responsible for creating and sending the minting transaction to the user's wallet.
 
 ## Getting Started
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+To run this application locally, you will need to have [Node.js](https://nodejs.org/en/) and [Yarn](https://yarnpkg.com/) installed.
 
-## Installation
+1.  Clone this repository:
 
-```bash
-npm install
-# or
-yarn install
-```
+    ```bash
+    git clone https://github.com/solana-developers/solana-pay-nft-minter.git
+    ```
 
-## Build and Run
+2.  Install the dependencies:
 
-Next, run the development server:
+    ```bash
+    cd solana-pay-nft-minter
+    yarn install
+    ```
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+3.  Run the development server:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+    ```bash
+    yarn dev
+    ```
+
+4.  Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Scanning QR codes
 
