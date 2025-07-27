@@ -28,12 +28,13 @@ export default function MintQR() {
   // Toast notification hook
   const displayToast = useToastHook();
 
+  const base_url = process.env.NEXT_PUBLIC_BASE_URL;
+
   useEffect(() => {
+    if (!base_url) return;
     // The API URL, which will be used to create the Solana Pay URL
     // Append the reference address to the URL as a query parameter
-    const apiUrl = `${
-      process.env.NEXT_PUBLIC_BASE_URL
-    }/api/mintNft?reference=${reference.toBase58()}`;
+    const apiUrl = `${base_url}/api/mintNft?reference=${reference.toBase58()}`;
 
     // Create Solana Pay URL
     const urlParams: TransactionRequestURLFields = {
@@ -53,9 +54,10 @@ export default function MintQR() {
       qrRef.current.innerHTML = "";
       qr.append(qrRef.current);
     }
-  }, [reference]);
+  }, [reference, base_url]);
 
   useEffect(() => {
+    if (!base_url) return;
     // Poll the network for transactions that include the reference address
     const interval = setInterval(async () => {
       try {
@@ -81,7 +83,11 @@ export default function MintQR() {
     return () => {
       clearInterval(interval);
     };
-  }, [reference]);
+  }, [reference, base_url, connection, displayToast]);
+
+  if (!base_url) {
+    return <div>Error: NEXT_PUBLIC_BASE_URL not set</div>;
+  }
 
   return <Flex ref={qrRef} />;
 }
