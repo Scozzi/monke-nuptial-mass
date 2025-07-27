@@ -12,10 +12,10 @@ require("@solana/wallet-adapter-react-ui/styles.css");
 const WalletContextProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const network = WalletAdapterNetwork.Mainnet;
   const endpoint = `https://mainnet.helius-rpc.com/?api-key=${process.env.NEXT_PUBLIC_HELIUS_API_KEY!}`;
-
   const wallets = useMemo(
     () => [],
     // eslint-disable-next-line react-hooks/exhaustive-deps
+    [network]
   );
 
   return (
