@@ -1,0 +1,29 @@
+{
+  "name": "Wedding Celebration NFT",
+  "symbol": "WEDDING",
+  "description": "A commemorative NFT celebrating a special wedding day",
+  "image": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/public/images/WeddingNFT.png",
+  "attributes": [
+    {
+      "trait_type": "Occasion",
+      "value": "Wedding"
+    },
+    {
+      "trait_type": "Category",
+      "value": "Celebration"
+    },
+    {
+      "trait_type": "Special",
+      "value": "Commemorative"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/public/images/WeddingNFT.png",
+        "type": "image/png"
+      }
+    ],
+    "category": "image"
+  }
+}
