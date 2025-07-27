@@ -2,7 +2,7 @@
   "name": "Wedding Celebration NFT",
   "symbol": "WEDDING",
   "description": "A commemorative NFT celebrating a special wedding day",
-  "image": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/public/images/WeddingNFT.png",
+  "image": "https://raw.githubusercontent.com/Scozzi/monke-nuptial-mass/master/public/images/WeddingNFT.png",
   "attributes": [
     {
       "trait_type": "Occasion",
@@ -20,7 +20,7 @@
   "properties": {
     "files": [
       {
-        "uri": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/public/images/WeddingNFT.png",
+        "uri": "https://raw.githubusercontent.com/Scozzi/monke-nuptial-mass/master/public/images/WeddingNFT.png",
         "type": "image/png"
       }
     ],
